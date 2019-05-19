@@ -1,52 +1,54 @@
 const userLight = {
-  "type": "array",
-  "items": {
-    "$ref": "#/definitions/UsersLightElement"
+  'type': 'array',
+  'items': {
+    '$ref': '#/definitions/UsersLightElement'
   },
-  "definitions": {
-    "UsersLightElement": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "firstName": {
-          "type": "string"
+  'definitions': {
+    'UsersLightElement': {
+      'type': 'object',
+      'additionalProperties': false,
+      'properties': {
+        'firstName': {
+          'type': 'string'
         }
       },
-      "required": [
-        "firstName"
+      'required': [
+        'firstName'
       ],
-      "title": "UsersLightElement"
+      'title': 'UsersLightElement'
     }
   }
 }
 
 const userExtended = {
-  "type": "array",
-  "items": {
-    "$ref": "#/definitions/UsersExtendedElement"
+  'type': 'array',
+  'items': {
+    '$ref': '#/definitions/UsersExtendedElement'
   },
-  "definitions": {
-    "UsersExtendedElement": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "firstName": {
-          "type": "string"
+  'definitions': {
+    'UsersExtendedElement': {
+      'type': 'object',
+      'additionalProperties': false,
+      'properties': {
+        'firstName': {
+          'type': 'string'
         },
-        "lastName": {
-          "type": "string"
+        'lastName': {
+          'type': 'string'
         }
       },
-      "required": [
-        "firstName",
-        "lastName"
+      'required': [
+        'firstName',
+        'lastName'
       ],
-      "title": "UsersExtendedElement"
+      'title': 'UsersExtendedElement'
     }
   }
 }
 
-module.exports = {
-  userLight,
-  userExtended
+module.exports = function () {
+  return {
+    userLight,
+    userExtended
+  }
 }
