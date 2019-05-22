@@ -1,50 +1,5 @@
-const userLight = {
-  'type': 'array',
-  'items': {
-    '$ref': '#/definitions/UsersLightElement'
-  },
-  'definitions': {
-    'UsersLightElement': {
-      'type': 'object',
-      'additionalProperties': false,
-      'properties': {
-        'firstName': {
-          'type': 'string'
-        }
-      },
-      'required': [
-        'firstName'
-      ],
-      'title': 'UsersLightElement'
-    }
-  }
-}
-
-const userExtended = {
-  'type': 'array',
-  'items': {
-    '$ref': '#/definitions/UsersExtendedElement'
-  },
-  'definitions': {
-    'UsersExtendedElement': {
-      'type': 'object',
-      'additionalProperties': false,
-      'properties': {
-        'firstName': {
-          'type': 'string'
-        },
-        'lastName': {
-          'type': 'string'
-        }
-      },
-      'required': [
-        'firstName',
-        'lastName'
-      ],
-      'title': 'UsersExtendedElement'
-    }
-  }
-}
+const userLight = "firstName";
+const userExtended = "firstName,lastName";
 
 module.exports = function () {
   return {
